@@ -5,8 +5,10 @@ from: Microsoft
 profile: justin-yoo.png
 github: justinyoo
 twitter: justinchronicle
+mastodon:
 facebook:
-linkedin:
+linkedin: justinyoo
 youtube:
-homepage:
+medium:
+homepage: blog.aliencube.org
 ---

@@ -1,12 +1,14 @@
 ---
-order: 4
+order: 5
 name: 최가인
 from: Riiid
 profile: olivia-choi.png
-github:
+github: ladygain
 twitter:
-facebook:
+mastodon:
+facebook:  ladygain.kr
 linkedin: ladygain
 youtube:
+medium: ladygain.kr
 homepage:
 ---

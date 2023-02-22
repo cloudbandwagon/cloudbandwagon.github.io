@@ -1,12 +1,14 @@
 ---
 order: 2
 name: 조성수
-from: 오픈스택 코리아
+from: 오픈스택 한국 커뮤니티
 profile: seongsoo-cho.png
 github: ppiyakk2
-twitter:
+twitter: seongsoo_kr
+mastodon:
 facebook:
 linkedin:
 youtube:
-homepage: printf.kr
+medium:
+homepage:  printf.kr
 ---

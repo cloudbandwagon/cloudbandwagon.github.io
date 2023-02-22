@@ -681,14 +681,16 @@ section {
 }
 
 .services .title {
+  display: block;
   font-weight: 700;
   margin-bottom: 15px;
   font-size: 18px;
-}
-
-.services .title a {
   color: #111;
 }
+
+/* .services .title a {
+  color: #111;
+} */
 
 .services .description {
   font-size: 15px;
@@ -782,6 +784,7 @@ section {
 }
 
 .events .icon-box .title {
+  color: #111;
   margin-left: 95px;
   font-weight: 700;
   margin-bottom: 10px;
@@ -789,16 +792,17 @@ section {
   text-transform: uppercase;
 }
 
-.events .icon-box .title a {
+/* .events .icon-box .title a {
   color: #343a40;
   transition: 0.3s;
-}
+} */
 
-.events .icon-box .title a:hover {
+/* .events .icon-box .title a:hover {
   color: #68A4C4;
-}
+} */
 
 .events .icon-box .description {
+  color: #111;
   margin-left: 95px;
   line-height: 24px;
   font-size: 14px;
@@ -1471,7 +1475,7 @@ section {
 .team .member .social a {
   transition: color 0.3s;
   color: #fff;
-  margin: 0 12px;
+  margin: 0 0.5em;
   display: inline-block;
 }
 
@@ -2261,19 +2265,29 @@ section {
   color: #fff;
 }
 
+#footer .footer-top .social-links {
+  text-align: center;
+}
+
 #footer .footer-top .social-links a {
-  font-size: 18px;
+  font-size: 30px;
   display: inline-block;
   background: #1e4356;
   color: #fff;
   line-height: 1;
-  padding: 8px 0;
-  margin-right: 4px;
+  padding: 10px 0;
+  margin-right: 15px;
   border-radius: 50%;
   text-align: center;
-  width: 36px;
-  height: 36px;
+  width: 48px;
+  height: 48px;
   transition: 0.3s;
+}
+
+#footer .footer-top .social-links i {
+  font-size: 30px;
+  display: inline-block;
+  color: #fff;
 }
 
 #footer .footer-top .social-links a:hover {
