@@ -54,7 +54,14 @@ layout: main
       <div class="col-sm-12 col-md-6 col-lg-6 col-xl-4 d-flex align-items-stretch p-4">
         <div class="icon-box">
           <a href="{{ event.link }}" target="_blank">
-            <div class="icon"><i class="bx bx-group"></i></div>
+            <!-- <div class="icon"><i class="bx bx-group"></i></div> -->
+            <div class="thumbnail">
+{% assign event_thumbnail = site.baseurl | append: "assets/img/events/thumbnail/" | append: event.thumbnail %}
+{% if event.thumbnail == nil or event.thumbnail == "" %}
+{% assign event_thumbnail = site.baseurl | append: "assets/img/icon-192.png" %}
+{% endif %}
+              <img src="{{ event_thumbnail }}" class="img-fluid" alt="{{ event.title }}">
+            </div>
             <h4 class="title">{{ event.title }}</h4>
             <p class="description">{{ event.description }}</p>
           </a>
@@ -71,7 +78,7 @@ layout: main
   <div class="container">
 
     <div class="section-title">
-      <h2>함께 하는 사람들</h2>
+      <h2>유랑단원 소개</h2>
     </div>
 
     <div class="row">

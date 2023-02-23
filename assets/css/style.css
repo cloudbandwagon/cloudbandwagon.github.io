@@ -758,7 +758,8 @@ section {
   margin-top: 50px;
 }
 
-.events .icon-box .icon {
+.events .icon-box .icon,
+.events .icon-box .thumbnail {
   float: left;
   display: flex;
   align-items: center;
@@ -768,6 +769,11 @@ section {
   background: #f3f8fa;
   border-radius: 6px;
   transition: 0.5s;
+}
+
+.events .icon-box .thumbnail {
+  background: #fff;
+  overflow: hidden;
 }
 
 .events .icon-box .icon i {

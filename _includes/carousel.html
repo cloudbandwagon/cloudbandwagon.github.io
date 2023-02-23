@@ -6,7 +6,7 @@
       <div class="carousel-item{% if isFirstSlide %} active{% endif %}">
         <div class="carousel-container">
           <h2 class="animate__animated animate__fadeInDown">{{ slide.title }}</h2>
-          <p class="animate__animated animate__fadeInUp">{{ slide.description }}</p>
+          <p class="animate__animated animate__fadeInUp">{{ slide.description | newline_to_br | markdownify }}</p>
           {% if slide.link %}
           <a href="{{ slide.link }}" class="btn-get-started animate__animated animate__fadeInUp">더 보기</a>
           {% endif %}
