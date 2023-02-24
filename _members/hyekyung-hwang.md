@@ -1,7 +1,7 @@
 ---
 order: 3
 name: 황혜경
-from: Planetarium
+from: Nine Corporation
 profile: hyekyung-hwang.png
 github: hyekyunghwang
 twitter:

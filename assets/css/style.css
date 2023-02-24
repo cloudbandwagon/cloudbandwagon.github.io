@@ -1503,7 +1503,6 @@ section {
 .team .member .member-info span {
   display: block;
   font-size: 13px;
-  text-transform: uppercase;
   font-weight: 400;
   margin-bottom: 15px;
   color: #68A4C4;
