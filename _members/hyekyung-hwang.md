@@ -1,6 +1,6 @@
 ---
 order: 3
-name: 황혜경
+name: 황혜경 | Hyekyung Hwang
 from: Nine Corporation
 profile: hyekyung-hwang.png
 github: hyekyunghwang

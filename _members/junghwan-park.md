@@ -1,6 +1,6 @@
 ---
 order: 6
-name: 박정환
+name: 박정환 | Junghwan Park
 from: 파이토치 한국 사용자 모임
 profile: junghwan-park.png
 github: 9bow

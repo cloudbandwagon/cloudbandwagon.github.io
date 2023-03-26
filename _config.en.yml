@@ -1,0 +1,55 @@
+# Site settings
+title: Cloud Bandwagon
+email: enquiry@bandwagon.cloud
+description: >-
+  The Cloud Bandwagon are here for you
+  Cloud Bandwagon celebrates diversity and strives to bridge the information gap.
+  Join us as we build a welcoming community of open minds and respect for each other!
+url: "https://dev.bandwagon.cloud"
+baseurl: "/"
+analytics:
+  google: G-3JQWP2V3H3
+  microsoft: fy8z2p7qhr
+
+# Site properties
+main:
+  slide:
+    - title: The Cloud Bandwagon are here for you
+      description:  >-
+        Cloud Bandwagon celebrates diversity and strives to bridge the information gap.
+        Please join us to be a welcoming community that grows together with open minds and respect for each other!
+      # link: # 생략하면 '더 보기' 버튼이 사라집니다.
+    # - title: # 큰 글씨입니다.
+    #   description: # 작은 글씨입니다. 줄 바꿈은 <br />을 넣어주세요.
+    #   link: # https:// 를 포함한 url을 적어주세요. 생략하면 '더 보기' 버튼이 사라집니다.
+ext_links:
+  coc: https://github.com/cloudbandwagon/.github/blob/main/CODE_OF_CONDUCT.md
+  github: https://github.com/cloudbandwagon
+  youtube: https://youtube.com/@CloudBandWagon
+  facebook: https://www.facebook.com/groups/377135874191187
+
+# Build settings
+markdown: kramdown
+theme: minima
+plugins:
+  - jekyll-feed
+collections:
+  events:
+    output: false
+  members:
+    output: false
+
+# Include from processing
+include:
+  - .nojekyll
+  - CNAME
+
+# Exclude from processing.
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - vendor/bundle/
+  - vendor/cache/
+  - vendor/gems/
+  - vendor/ruby/

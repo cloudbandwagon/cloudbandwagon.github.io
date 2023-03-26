@@ -1,6 +1,6 @@
 ---
 order: 5
-name: 최가인
+name: 최가인 | Olivia Choi
 from: Riiid
 profile: olivia-choi.png
 github: ladygain
