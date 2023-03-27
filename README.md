@@ -1,16 +1,16 @@
-## 클라우드 유랑단 홈페이지
+# 클라우드 유랑단 홈페이지
 
-### 소개
+## 소개
 
 - [클라우드 유랑단 홈페이지](https://bandwagon.cloud/)는 [Jekyll](https://jekyllrb.com/)를 사용하여 만들었으며, [GitHub Pages](https://pages.github.com/)로 호스팅합니다.
 - 본 저장소의 `main` 브랜치에 반영된 내용은 [GitHub Actions](https://github.com/cloudbandwagon/cloudbandwagon.github.io/actions)가 자동으로 빌드하여 [gh-pages](https://github.com/cloudbandwagon/cloudbandwagon.github.io/tree/gh-pages) 브랜치에 반영합니다.
 
 
-### 개발 환경 구축하기
+## 개발 환경 구축하기
 
 - 아래는 macOS에서 개발 환경을 구축하는 방법입니다.
 
-#### 0. 저장소 복제
+### 0. 저장소 복제
 
 - 클라우드 유랑단 홈페이지 저장소를 복제한 뒤, 복제한 저장소 디렉토리로 진입합니다.
   ```bash
@@ -18,7 +18,7 @@
   cd cloudbandwagon.github.io
   ```
 
-#### 1. Ruby 설치
+### 1. Ruby 설치
 
 - [homebrew](https://brew.sh/)를 사용하여 여러 Ruby 버전을 사용할 수 있는 `rbenv`를 설치합니다.
   ```bash
@@ -30,7 +30,7 @@
   rbenv local `cat .ruby-version`   # Ruby 설정
   ```
 
-#### 2. Jekyll 설치
+### 2. Jekyll 설치
 
 - `bundler`를 설치하고, Jekyll 및 필요 패키지들을 설치합니다.
   ```bash
@@ -38,7 +38,7 @@
   bundle install
   ```
 
-#### 3. Jekyll 실행
+### 3. Jekyll 실행
 
 - Jekyll을 실행하고, `http://localhost:4000`으로 접속하여 확인합니다.
   ```bash
@@ -48,9 +48,9 @@
 - `_config.yml` 파일 등을 수정하는 경우 `jekyll serve`를 다시 실행하여 반영하셔야 합니다.
 
 
-### 사용법
+## 사용법
 
-#### 메인 페이지
+### 메인 페이지
 
 - `_config.yml` 파일의 `main` 섹션에 새로운 `slide` 값을 추가하거나 기존 값을 수정합니다.
 - 아래와 같이 `title`과 `description`을 입력하면 새로운 메인 화면 내용이 추가됩니다.
@@ -65,7 +65,7 @@
       #   link: # https:// 를 포함한 url을 적어주세요. 생략하면 '더 보기' 버튼이 사라집니다.
   ```
 
-#### 행사 추가하기
+### 행사 추가하기
 
 - `_events/` 디렉토리 아래에 새로운 행사 파일을 추가하거나, 기존 행사 정보를 변경할 수 있습니다.
 - 새로운 행사 추가를 위해서는 `_template.md` 파일을 복사하여 사용합니다.
@@ -81,7 +81,7 @@
   ---
   ```
 
-#### 유랑단원 추가하기
+### 유랑단원 추가하기
 
 - `_members/` 디렉토리 아래에 새로운 유랑단원 파일을 추가하거나, 기존 유랑단원 정보를 변경할 수 있습니다.
 - 새로운 단원 추가를 위해서는 `_template` 파일을 복사하여 사용합니다.
