@@ -1,0 +1,97 @@
+{
+  "build": {
+    "dockerfile": "./Dockerfile",
+    "context": ".",
+    "args": {
+      "VARIANT": "3.0-bullseye"
+    }
+  },
+
+  // Use 'forwardPorts' to make a list of ports inside the container available locally.
+  "forwardPorts": [
+    // Jekyll server
+    4000,
+    // Live reload server
+    35729
+  ],
+
+  "features": {
+    // Uncomment the below to install GitHub CLI
+    "ghcr.io/devcontainers/features/github-cli:1": {
+      "version": "latest"
+    },
+
+    // Uncomment the below to install node.js
+    "ghcr.io/devcontainers/features/node:1": {
+      "version": "lts",
+      "nodeGypDependencies": true,
+      "nvmInstallPath": "/usr/local/share/nvm"
+    },
+
+    // Install common utilities
+    "ghcr.io/devcontainers/features/common-utils:1": {
+      "installZsh": true,
+      "installOhMyZsh": true,
+      "upgradePackages": true,
+      "username": "vscode",
+      "uid": "1000",
+      "gid": "1000"
+    }
+  },
+
+  "overrideFeatureInstallOrder": [
+    "ghcr.io/devcontainers/features/common-utils"
+  ],
+
+  // Configure tool-specific properties.
+  "customizations": {
+    // Configure properties specific to VS Code.
+    "vscode": {
+      // Add the IDs of extensions you want installed when the container is created.
+      "extensions": [
+        // Recommended extensions - GitHub
+        "cschleiden.vscode-github-actions",
+        "GitHub.vscode-pull-request-github",
+
+        // Recommended extensions - Collaboration
+        "eamodio.gitlens",
+        "EditorConfig.EditorConfig",
+        "MS-vsliveshare.vsliveshare-pack",
+        "streetsidesoftware.code-spell-checker",
+
+        // Recommended extensions - Markdown
+        "bierner.github-markdown-preview",
+        "DavidAnson.vscode-markdownlint",
+        "docsmsft.docs-linting",
+        "johnpapa.read-time",
+        "yzhang.markdown-all-in-one",
+
+        // Required extensions
+        "GitHub.copilot"
+      ],
+
+      "settings": {
+        // Uncomment if you want to disable the minimap view
+        "editor.minimap.enabled": false,
+
+        // Uncomment if you want to disable the welcome page of GitLens
+        "gitlens.showWelcomeOnInstall": false,
+        "gitlens.showWhatsNewAfterUpgrades": false,
+
+        // Recommended settings for the explorer pane
+        "explorer.sortOrder": "type",
+        "explorer.fileNesting.enabled": true,
+        "explorer.fileNesting.patterns": {
+          "*.ts": "${capture}.js",
+          "*.js": "${capture}.js.map"
+        }
+      }
+    }
+  },
+
+  // Use 'postCreateCommand' to run commands after the container is created.
+  "postCreateCommand": "sh /usr/local/post-create.sh",
+
+  // Uncomment if you want to connect other than 'root'. More info: https://aka.ms/vscode-remote/containers/non-root.
+  "remoteUser": "vscode"
+}
