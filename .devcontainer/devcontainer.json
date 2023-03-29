@@ -49,10 +49,6 @@
     "vscode": {
       // Add the IDs of extensions you want installed when the container is created.
       "extensions": [
-        // Recommended extensions - GitHub
-        "cschleiden.vscode-github-actions",
-        "GitHub.vscode-pull-request-github",
-
         // Recommended extensions - Collaboration
         "eamodio.gitlens",
         "EditorConfig.EditorConfig",
@@ -68,7 +64,9 @@
 
         // Required extensions
         "GitHub.copilot",
-        "GitHub.copilot-labs"
+        "GitHub.copilot-labs",
+        "GitHub.vscode-github-actions",
+        "GitHub.vscode-pull-request-github"
       ],
 
       "settings": {
