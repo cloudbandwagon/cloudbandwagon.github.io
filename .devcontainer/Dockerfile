@@ -20,7 +20,7 @@ RUN chown -R "vscode:rvm" "/usr/local/rvm/" \
     && chmod -R g+r+w "/usr/local/rvm/" \
     && find "/usr/local/rvm/" -type d | xargs -n 1 chmod g+s
 
-COPY post-create.sh /usr/local/post-create.sh
+# COPY post-create.sh /usr/local/post-create.sh
 
 # [Optional] Uncomment this section to install additional OS packages.
 # RUN apt-get update && export DEBIAN_FRONTEND=noninteractive \
