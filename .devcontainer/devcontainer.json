@@ -67,7 +67,8 @@
         "yzhang.markdown-all-in-one",
 
         // Required extensions
-        "GitHub.copilot"
+        "GitHub.copilot",
+        "GitHub.copilot-labs"
       ],
 
       "settings": {

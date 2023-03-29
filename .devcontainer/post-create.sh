@@ -19,3 +19,7 @@ fi
 if [ -f Gemfile ]; then
     bundle install
 fi
+
+# Install GitHub Copilot CLI
+npm install -g @githubnext/github-copilot-cli
+eval "$(github-copilot-cli alias -- "$0")"
