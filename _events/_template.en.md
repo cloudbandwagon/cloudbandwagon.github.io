@@ -1,4 +1,5 @@
 ---
+lang: en    # 언어 정보 (영어)
 title: # 행사 제목
 date:  # 행사 일정, YYYY-mm-dd
 link:  # 행사 링크

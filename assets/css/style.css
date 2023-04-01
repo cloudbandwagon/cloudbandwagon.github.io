@@ -2271,7 +2271,7 @@ section {
 }
 
 #footer .footer-top .social-links {
-  text-align: center;
+  text-align: left;
 }
 
 #footer .footer-top .social-links a {
@@ -2369,4 +2369,32 @@ section {
 
 #footer .credits a {
   color: #a2cce3;
+}
+
+
+/*--------------------------------------------------------------
+# i18n
+--------------------------------------------------------------*/
+
+.i18n {
+  padding: 0;
+  margin-top: 20px;
+  text-align: center;
+}
+
+.i18n ul {
+  margin: 0;
+  padding: 0;
+  display: inline-flex;
+  list-style: none;
+  align-items: center;
+}
+
+.i18n li {
+  font-size: 17px;
+  margin: 0 5px 0 5px;
+}
+
+.i18n ul .active {
+  font-weight: 800;
 }

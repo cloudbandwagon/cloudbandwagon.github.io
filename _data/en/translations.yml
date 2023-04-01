@@ -1,0 +1,28 @@
+site:
+  title: Cloud Bandwagon
+  description: >-
+    The Cloud Bandwagon are here for you
+    Cloud Bandwagon celebrates diversity and strives to bridge the information gap.
+    Join us as we build a welcoming community of open minds and respect for each other!
+includes:
+  carousel:
+    slides:
+      - title: Cloud Bandwagon by your side
+        description:  >-
+          We, Cloud Bandwagon recognizes diversity and strives to bridge the information gap.
+          Please join us to become a warm community that grows together with open minds and respect for each other!
+        # link: # 생략하면 '더 보기' 버튼이 사라집니다.
+      # - title: # 큰 글씨입니다.
+      #   description: # 작은 글씨입니다. 줄 바꿈은 <br />을 넣어주세요.
+      #   link: # https:// 를 포함한 url을 적어주세요. 생략하면 '더 보기' 버튼이 사라집니다.
+    slide_prev: Prev
+    slide_next: Next
+    slide_more: Read more
+  footer:
+    contact:
+      heading: Contact
+      description: Need us? Keep in touch!
+    social:
+      heading: Social
+      description: Find us on other services!
+    coc: The Cloud Bandwagon and those who be with us adhere to a <a href="{{ site.ext_links.coc }}" target="_blank">Code of Conduct</a>.
