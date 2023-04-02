@@ -1,4 +1,5 @@
 ---
+lang: ko
 order: 3
 name: 황혜경
 from: Nine Corporation

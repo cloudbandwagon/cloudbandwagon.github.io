@@ -1,4 +1,5 @@
 ---
+lang: ko
 order: 2
 name: 조성수
 from: 오픈스택 한국 커뮤니티

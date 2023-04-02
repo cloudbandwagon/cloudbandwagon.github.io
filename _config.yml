@@ -2,7 +2,7 @@
 title: SITE_TITLE                       # 기본값, 언어별 _data/[lang]/translations.yml 의 title 을 사용
 email: enquiry@bandwagon.cloud
 description: SITE_DESCRIPTIONS          # 기본값, 언어별 _data/[lang]/translations.yml 의 description 을 사용
-url: https://dev.bandwagon.cloud
+url: https://bandwagon.cloud
 baseurl: /
 analytics:
   google: G-3JQWP2V3H3

@@ -1,4 +1,5 @@
 ---
+lang: en
 order: 2
 name: Seongsoo Cho
 from: OpenStack Korea User Group
