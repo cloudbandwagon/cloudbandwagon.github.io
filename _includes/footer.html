@@ -28,9 +28,12 @@
     <div class="container">
       <div class="i18n align-items-center">
         <ul>
-{% for support_lang in site.languages %}
-        <li{% if support_lang == site.active_lang %} class="active"{% endif %}>
-          <a {% static_href %}href="{% if support_lang == site.default_lang %}{{site.baseurl}}{{page.url}}{% else %}{{site.baseurl}}/{{support_lang}}{{page.url}}{% endif %}"{% endstatic_href %}>{{ site.data.languages[support_lang] }}</a>
+{% for lang_code in site.languages %}
+  {% if lang_code == site.default_lang %}{% assign lang_href = site.baseurl | append: page.url | replace: "//", "/" %}
+  {% else %}{% assign lang_href = site.baseurl | append: lang_code | append: page.url | replace: "//", "/"  %}
+  {% endif %}
+        <li{% if lang_code == site.active_lang %} class="active"{% endif %}>
+          <a href="{{ lang_href }}">{{ site.data.languages[lang_code] }}</a>
         </li>
         {%- if forloop.last == false -%}<li>{{" "}}{{ site.langsep }}{{" "}}</li>{%- endif -%}
 {% endfor %}
