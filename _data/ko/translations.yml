@@ -1,0 +1,28 @@
+site:
+  title: 클라우드 유랑단
+  description: >-
+    여러분 곁의 클라우드 유랑단
+    클라우드 유랑단은 다양성을 인정하고 정보 격차 해소를 위해 노력합니다.
+    열린 마음으로 서로를 존중하며 다 같이 성장하는 따뜻한 커뮤니티가 되도록 함께 해주세요!
+includes:
+  carousel:
+    slides:
+      - title: 여러분 곁의 클라우드 유랑단
+        description:  >-
+          클라우드 유랑단은 다양성을 인정하고 정보 격차 해소를 위해 노력합니다.
+          열린 마음으로 서로를 존중하며 다 같이 성장하는 따뜻한 커뮤니티가 되도록 함께 해주세요!
+        # link: # 생략하면 '더 보기' 버튼이 사라집니다.
+      # - title: # 큰 글씨입니다.
+      #   description: # 작은 글씨입니다. 줄 바꿈은 <br />을 넣어주세요.
+      #   link: # https:// 를 포함한 url을 적어주세요. 생략하면 '더 보기' 버튼이 사라집니다.
+    slide_prev: 이전
+    slide_next: 다음
+    slide_more: 더 보기
+  footer:
+    contact:
+      heading: 유랑단에 연락하기
+      description: 유랑단이 필요하신가요? 연락주세요!
+    social:
+      heading: 유랑단 소식
+      description: 더 많은 곳에서 클라우드 유랑단을 만나보세요!
+    coc: 클라우드 유랑단 및 유랑단과 함께 하는 모든 사람들은 <a href="{{ site.ext_links.coc }}" target="_blank">행동 강령</a>을 준수합니다.

@@ -1,6 +1,7 @@
 ---
+lang: en
 order: 5
-name: 최가인
+name: Gain Choi
 from: Riiid
 profile: olivia-choi.png
 github: ladygain

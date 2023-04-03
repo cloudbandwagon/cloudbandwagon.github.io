@@ -3,7 +3,7 @@
     <div class="container d-flex justify-content-between align-items-center">
 
       <div class="logo">
-        <h1 class="text-light"><a href="{{ site.baseurl }}"><span>{{ site.title }}</span></a></h1>
+        <h1 class="text-light"><a href="{{ site.baseurl }}"><span>{{ translations.site.title }}</span></a></h1>
         <!-- Uncomment below if you prefer to use an image logo -->
         <!-- <a href="{{ site.baseurl }}"><img src="{{ site.baseurl }}assets/img/logo.png" alt="" class="img-fluid"></a>-->
       </div>
@@ -36,6 +36,12 @@
           <li><a href="{{ site.baseurl }}contact.html">Contact Us</a></li>
         </ul>
         <i class="bi bi-list mobile-nav-toggle"></i>
+        <ul>
+          <li class="dropdown"><span class="flag-{{ translations.lang_flag }}"> </span></li>
+          <ul>
+            <li><a href="#">Drop Down 1</a></li>
+          </ul>
+        </ul>
       </nav> -->
       <!-- End .navbar -->
 

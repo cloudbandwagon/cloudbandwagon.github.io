@@ -106,12 +106,13 @@
 ### 행사 추가하기
 
 - `_events/` 디렉토리 아래에 새로운 행사 파일을 추가하거나, 기존 행사 정보를 변경할 수 있습니다.
-- 새로운 행사 추가를 위해서는 `_template.md` 파일을 복사하여 사용합니다.
+- 새로운 행사 추가를 위해서는 `_template.ko.md` 및 `_template.en.md` 파일을 복사하여 각각 한국어와 영어로 작성하여 사용합니다.
   - 파일명은 `YYYY-MM-DD-간단한지역또는행사명.md` 형식으로 작성합니다. (예. `2023-02-18-DDD.md`)
   - 행사 소개 사진 파일명은 동일하게 지정하여 `assets/img/events/thumbnail/` 에 저장합니다. (예. `2023-02-18-DDD.png`)
 
     ```markdown
     ---
+    lang:  # 언어 정보 (ko 또는 en)
     title: # 행사 제목
     date:  # 행사 일정, YYYY-mm-dd
     link:  # 행사 링크
@@ -123,18 +124,19 @@
 ### 유랑단원 추가하기
 
 - `_members/` 디렉토리 아래에 새로운 유랑단원 파일을 추가하거나, 기존 유랑단원 정보를 변경할 수 있습니다.
-- 새로운 단원 추가를 위해서는 `_template` 파일을 복사하여 사용합니다.
+- 새로운 단원 추가를 위해서는 `_template.ko.md` 및 `_template.en.md` 파일을 복사하여 각각 한국어와 영어로 작성하여 사용합니다.
   - 파일명은 `영문이름-영문성.md` 파일을 복사하여 사용합니다. (예. `justin-yoo.md`)
   - 유랑단원의 사진 파일명은 동일하게 지정하여 `assets/img/members/` 에 저장합니다. (예. `justin-yoo.png`)
 
     ```markdown
     ---
+    lang:       # 언어 정보 (ko 또는 en)
     # 기본 정보
     order:      # 정렬 순서 (숫자)
     name:       # 한글 이름
     from:       # 소속
     profile:    # 사진 파일명 (300px x 300px)
-  
+
     # 소셜 정보 (최대 4개)
     github:     # GitHub ID
     twitter:    # Twitter ID (@ 제외)

@@ -1,5 +1,7 @@
 ---
 layout: main
+lang: ko
+permalink: /
 ---
 
 <!-- ======= About Section ======= -->
@@ -12,7 +14,7 @@ layout: main
       <div class="col-md-6 col-lg-3 d-flex align-items-stretch" data-aos="fade-up">
         <div class="icon-box icon-box-pink">
           <div class="icon"><i class="bx bx-group"></i></div>
-          <h4 class="title">따뜻한 커뮤니티</a></h4>
+          <h4 class="title">따뜻한 커뮤니티</h4>
           <p class="description">서로 다른 성별, 연령대의 사람들이 모여 서로를 환영하고 존중하는 따뜻한 커뮤니티를 지향합니다.</p>
         </div>
       </div>

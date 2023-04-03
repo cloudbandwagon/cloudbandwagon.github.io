@@ -1,6 +1,7 @@
 ---
+lang: en
 order: 1
-name: 유저스틴
+name: Justin Yoo
 from: Microsoft
 profile: justin-yoo.png
 github: justinyoo

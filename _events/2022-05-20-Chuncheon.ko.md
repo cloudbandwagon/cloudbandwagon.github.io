@@ -1,4 +1,5 @@
 ---
+lang: ko
 title: 춘천 개발자 밋업
 date: 2022-05-20
 link: https://festa.io/events/2296

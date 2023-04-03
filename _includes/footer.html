@@ -1,35 +1,44 @@
-  <!-- ======= Footer ======= -->
+<!-- ======= Footer ======= -->
   <footer id="footer" data-aos="fade-up" data-aos-easing="ease-in-out" data-aos-duration="500">
     <div class="footer-top">
       <div class="container">
         <div class="row">
-          <div class="col-lg-3 col-md-6 footer-links">
-            <h4>유랑단에 연락하기</h4>
-            <p>유랑단이 필요하신가요? 연락주세요!</p>
+          <div class="col-lg-6 col-md-6 footer-links">
+            <h4>{{ translations.includes.footer.contact.heading }}</h4>
+            <p>{{ translations.includes.footer.contact.description }}</p>
             <div class="social-likes mt-6">
               <a href="mailto:{{ site.email }}" class="email"><i class="bx bx-envelope"></i> {{ site.email }}</a>
             </div>
           </div>
-          <div class="col-lg-3 col-md-6 footer-links"></div>
-          <div class="col-lg-3 col-md-6 footer-links"></div>
-          <div class="col-lg-3 col-md-6 footer-links">
-            <h4>유랑단 소식</h4>
-            <p>더 많은 곳에서 클라우드 유랑단을 만나보세요!</p>
+          <!-- <div class="col-lg-3 col-md-6 footer-links"></div>
+          <div class="col-lg-3 col-md-6 footer-links"></div> -->
+          <div class="col-lg-6 col-md-6 footer-links">
+            <h4>{{ translations.includes.footer.social.heading }}</h4>
+            <p>{{ translations.includes.footer.social.description }}</p>
             <div class="social-links mt-3">
               <a href="{{ site.ext_links.github }}" target="_blank" class="github"><i class="bx bxl-github"></i></a>
               <a href="{{ site.ext_links.youtube }}" target="_blank" class="youtube"><i class="bx bxl-youtube"></i></a>
               <a href="{{ site.ext_links.facebook }}" target="_blank" class="facebook"><i class="bx bxl-facebook"></i></a>
             </div>
           </div>
-
         </div>
       </div>
     </div>
 
     <div class="container">
+      <div class="i18n align-items-center">
+        <ul>
+{% for support_lang in site.languages %}
+        <li{% if support_lang == site.active_lang %} class="active"{% endif %}>
+          <a {% static_href %}href="{% if support_lang == site.default_lang %}{{site.baseurl}}{{page.url}}{% else %}{{site.baseurl}}/{{support_lang}}{{page.url}}{% endif %}"{% endstatic_href %}>{{ site.data.languages[support_lang] }}</a>
+        </li>
+        {%- if forloop.last == false -%}<li>{{" "}}{{ site.langsep }}{{" "}}</li>{%- endif -%}
+{% endfor %}
+        </ul>
+      </div>
       <div class="copyright">
-        <p class="footer-links">클라우드 유랑단 및 유랑단과 함께 하는 모든 사람들은 <a href="{{ site.ext_links.coc }}" target="_blank">행동 강령</a>을 준수합니다.</p>
-        &copy; Copyright <strong><span>클라우드 유랑단</span></strong>. All Rights Reserved.
+        <p class="footer-links">{{ translations.includes.footer.coc }}</p>
+        &copy; Copyright <strong><span>{{ translations.site.title }}</span></strong>. All Rights Reserved.
       </div>
       <div class="credits">
         <!-- All the links in the footer should remain intact. -->

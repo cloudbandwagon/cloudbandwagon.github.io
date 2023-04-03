@@ -1,7 +1,8 @@
 ---
+lang: en
 order: 2
-name: 조성수
-from: 오픈스택 한국 커뮤니티
+name: Seongsoo Cho
+from: OpenStack Korea User Group
 profile: seongsoo-cho.png
 github: ppiyakk2
 twitter: seongsoo_kr
