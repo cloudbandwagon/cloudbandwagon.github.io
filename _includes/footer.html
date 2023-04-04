@@ -29,11 +29,12 @@
       <div class="i18n align-items-center">
         <ul>
 {% for lang_code in site.languages %}
-  {% if lang_code == site.default_lang %}{% assign lang_href = site.baseurl | append: page.url | replace: "//", "/" %}
-  {% else %}{% assign lang_href = site.baseurl | append: lang_code | append: page.url | replace: "//", "/"  %}
+  {% if lang_code == site.default_lang %}{% assign lang_href = site.baseurl | append: page.url | relative_url | replace: "//", "/" %}
+  {% else %}{% assign lang_href = site.baseurl | append: lang_code | append: page.url | relative_url | replace: "//", "/"  %}
   {% endif %}
         <li{% if lang_code == site.active_lang %} class="active"{% endif %}>
-          <a href="{{ lang_href }}">{{ site.data.languages[lang_code] }}</a>
+          {% if lang_code == site.active_lang %}<span>{{ site.data.languages[lang_code] }}</span>
+          {% else %}<a href="{{ lang_href }}">{{ site.data.languages[lang_code] }}</a>{% endif %}
         </li>
         {%- if forloop.last == false -%}<li>{{" "}}{{ site.langsep }}{{" "}}</li>{%- endif -%}
 {% endfor %}
