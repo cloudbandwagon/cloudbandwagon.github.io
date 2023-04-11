@@ -25,4 +25,4 @@ includes:
     social:
       heading: 유랑단 소식
       description: 더 많은 곳에서 클라우드 유랑단을 만나보세요!
-    coc: 클라우드 유랑단 및 유랑단과 함께 하는 모든 사람들은 <a href="{{ site.ext_links.coc }}" target="_blank">행동 강령</a>을 준수합니다.
+    coc: 클라우드 유랑단 및 유랑단과 함께 하는 모든 사람들은 <a href="__COC_URL__" target="_blank">행동 강령</a>을 준수합니다.
