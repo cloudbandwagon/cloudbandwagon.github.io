@@ -41,7 +41,7 @@
         </ul>
       </div>
       <div class="copyright">
-        <p class="footer-links">{{ translations.includes.footer.coc }}</p>
+        <p class="footer-links">{{ translations.includes.footer.coc | replace: "__COC_URL__", site.ext_links.coc }}</p>
         &copy; Copyright <strong><span>{{ translations.site.title }}</span></strong>. All Rights Reserved.
       </div>
       <div class="credits">

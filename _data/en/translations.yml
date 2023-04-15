@@ -25,4 +25,4 @@ includes:
     social:
       heading: Social
       description: Find us on other services!
-    coc: The Cloud Bandwagon and those who be with us adhere to a <a href="{{ site.ext_links.coc }}" target="_blank">Code of Conduct</a>.
+    coc: The Cloud Bandwagon and those who be with us adhere to a <a href="__COC_URL__" target="_blank">Code of Conduct</a>.
