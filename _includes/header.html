@@ -1,48 +1,38 @@
-  <!-- ======= Header ======= -->
-  <header id="header" class="fixed-top d-flex align-items-center header-transparent">
+{% assign current = page.url | downcase | remove: ".html" | split: "/" %}
+{% if site.active_lang == site.default_lang %}
+{% assign lang_path = "/" %}
+{% else %}
+{% assign lang_path = "/" | append: site.active_lang | append: "/" | replace: "//", "/" %}
+{% endif %}
+<!-- ======= Header ======= -->
+  <header id="header" class="fixed-top d-flex align-items-center{% if page.url == "/" or page.url == "" %} header-transparent{% endif %}">
     <div class="container d-flex justify-content-between align-items-center">
 
       <div class="logo">
-        <h1 class="text-light"><a href="{{ site.baseurl }}"><span>{{ translations.site.title }}</span></a></h1>
+        <h1 class="text-light"><a href="{{ site.baseurl | append: lang_path }}"><span>{{ translations.site.title }}</span></a></h1>
         <!-- Uncomment below if you prefer to use an image logo -->
         <!-- <a href="{{ site.baseurl }}"><img src="{{ site.baseurl }}assets/img/logo.png" alt="" class="img-fluid"></a>-->
       </div>
 
-      <!-- <nav id="navbar" class="navbar">
+      <nav id="navbar" class="navbar">
         <ul>
-          <li><a class="active " href="{{ site.baseurl }}">Home</a></li>
-          <li><a href="{{ site.baseurl }}about.html">About</a></li>
-          <li><a href="{{ site.baseurl }}services.html">Services</a></li>
-          <li><a href="{{ site.baseurl }}portfolio.html">Portfolio</a></li>
-          <li><a href="{{ site.baseurl }}team.html">Team</a></li>
-          <li><a href="{{ site.baseurl }}blog.html">Blog</a></li>
-          <li class="dropdown"><a href="#"><span>Drop Down</span> <i class="bi bi-chevron-down"></i></a>
+          <li><a{% if page.url == "/" or page.url == "" %} class="active"{% endif %} href="{{ site.baseurl | append: lang_path }}">{{ translations.menu.home }}</a></li>
+          <li><a{% if current[1] == "blog" %} class="active"{% endif %} href="{{ site.baseurl | append: lang_path | append: "blog" | replace: "//", "/" }}">{{ translations.menu.blog }}</a></li>
+          <li class="dropdown"><a href="#"><span><i class="bi bi-globe"></i></span> <i class="bi bi-chevron-down"></i></a>
             <ul>
-              <li><a href="#">Drop Down 1</a></li>
-              <li class="dropdown"><a href="#"><span>Deep Drop Down</span> <i class="bi bi-chevron-right"></i></a>
-                <ul>
-                  <li><a href="#">Deep Drop Down 1</a></li>
-                  <li><a href="#">Deep Drop Down 2</a></li>
-                  <li><a href="#">Deep Drop Down 3</a></li>
-                  <li><a href="#">Deep Drop Down 4</a></li>
-                  <li><a href="#">Deep Drop Down 5</a></li>
-                </ul>
-              </li>
-              <li><a href="#">Drop Down 2</a></li>
-              <li><a href="#">Drop Down 3</a></li>
-              <li><a href="#">Drop Down 4</a></li>
+              {% for lang_code in site.languages %}
+              {% if lang_code == site.default_lang %}{% assign lang_href = site.baseurl | append: page.url | relative_url | replace: "//", "/" %}
+              {% else %}{% assign lang_href = site.baseurl | append: lang_code | append: page.url | relative_url | replace: "//", "/"  %}
+              {% endif %}
+                <li>
+                  <a{% if lang_code == site.active_lang %} class="active"{% endif %} href="{{ lang_href }}">{{ site.data.languages[lang_code] }}</a>
+                </li>
+            {% endfor %}
             </ul>
           </li>
-          <li><a href="{{ site.baseurl }}contact.html">Contact Us</a></li>
         </ul>
         <i class="bi bi-list mobile-nav-toggle"></i>
-        <ul>
-          <li class="dropdown"><span class="flag-{{ translations.lang_flag }}"> </span></li>
-          <ul>
-            <li><a href="#">Drop Down 1</a></li>
-          </ul>
-        </ul>
-      </nav> -->
+      </nav>
       <!-- End .navbar -->
 
     </div>

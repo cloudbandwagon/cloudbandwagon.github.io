@@ -1,6 +1,6 @@
 ---
-layout: main
 lang: ko
+layout: main
 permalink: /
 ---
 

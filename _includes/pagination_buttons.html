@@ -1,0 +1,11 @@
+<div class="blog-pagination">
+  <ul class="justify-content-center">
+    {% if paginator.page_trail %}
+    {% for trail in paginator.page_trail %}
+      <li{% if page.url == trail.path %} class="active"{% endif %}>
+          <a href="{{ trail.path | prepend: site.baseurl }}" title="{{trail.title}}">{{ trail.num }}</a>
+      </li>
+    {% endfor %}
+  {% endif %}
+  </ul>
+</div>

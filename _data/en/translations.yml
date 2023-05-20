@@ -4,6 +4,10 @@ site:
     The Cloud Bandwagon are here for you -
     Cloud Bandwagon celebrates diversity and strives to bridge the information gap.
     Join us as we build a welcoming community of open minds and respect for each other!
+  author: Cloud Bandwagon
+menu:
+  home: Home
+  blog: Blog
 includes:
   carousel:
     slides:
@@ -26,3 +30,5 @@ includes:
       heading: Social
       description: Find us on other services!
     coc: The Cloud Bandwagon and those who be with us adhere to a <a href="__COC_URL__" target="_blank">Code of Conduct</a>.
+  blog:
+    readmore: Read more

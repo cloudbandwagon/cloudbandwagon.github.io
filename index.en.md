@@ -1,6 +1,6 @@
 ---
-layout: main
 lang: en
+layout: main
 permalink: /
 ---
 
