@@ -4,6 +4,10 @@ site:
     여러분 곁의 클라우드 유랑단 -
     클라우드 유랑단은 다양성을 인정하고 정보 격차 해소를 위해 노력합니다.
     열린 마음으로 서로를 존중하며 다 같이 성장하는 따뜻한 커뮤니티가 되도록 함께 해주세요!
+  author: 클라우드 유랑단
+menu:
+  home: 홈
+  blog: 블로그
 includes:
   carousel:
     slides:
@@ -26,3 +30,5 @@ includes:
       heading: 유랑단 소식
       description: 더 많은 곳에서 클라우드 유랑단을 만나보세요!
     coc: 클라우드 유랑단 및 유랑단과 함께 하는 모든 사람들은 <a href="__COC_URL__" target="_blank">행동 강령</a>을 준수합니다.
+  blog:
+    readmore: 더 보기

@@ -1,0 +1,88 @@
+{% assign translations = site.data.translations %}
+<!DOCTYPE html>
+<html lang="{{ site.active_lang }}">
+{% include head.html %}
+{% include analytics.html %}
+<body>
+{% include header.html %}
+
+  <!-- ======= #main Section ======= -->
+  <main id="main">
+{% assign posts = paginator.posts %}
+{% assign display_post_categories = site.posts | map: 'categories' | join: ',' | replace: '-', ' ' | split: ',' | uniq | sort %}
+{% assign current_page = page.url | downcase | remove: ".html" | split: '/'  %}
+{% assign post_categories = site.posts | map: 'categories' | join: ',' | split: ',' | uniq | sort %}
+
+  <!-- ======= Blog Section ======= -->
+  <section class="breadcrumbs">
+    <div class="container">
+
+      <div class="d-flex justify-content-between align-items-center">
+        <h2>{{ translations.menu.blog }}</h2>
+
+        <ol>
+          <li><a href="{{ site.baseurl | append: lang_path }}">{{ translations.menu.home }}</a></li>
+          <li>{{ translations.menu.blog }}</li>
+        </ol>
+      </div>
+
+    </div>
+  </section>
+  <!-- End Blog Section -->
+
+  <!-- ======= Blog Section ======= -->
+  <section id="blog" class="blog">
+    <div class="container" data-aos="fade-up">
+      <div class="row">
+        <!-- Blog List Section -->
+        <div class="col-lg-12 entries">
+
+{% for post in posts %}
+{% assign author = post.author | default: translations.site.author %}
+{% assign post_link = site.baseurl | append: post.url | replace: "//", "/" %}
+          <article class="entry row">
+            <div class="col-lg-3">
+              {% assign blog_thumbnail = site.baseurl | append: "assets/blog/" | append: post.thumbnail %}
+              {% if post.thumbnail == nil or post.thumbnail == "" %}
+              {% assign blog_thumbnail = site.baseurl | append: "assets/img/hero-bg.png" %}
+              {% endif %}
+              <div class="entry-img-list">
+                <a href="{{ post_link }}"><img src="{{ blog_thumbnail }}" alt="{{ post.title }}" class="img-fluid"></a>
+              </div>
+              <div class="entry-meta-list">
+                <ul>
+                  <li class="d-flex align-items-left"><i class="bi bi-person"></i> <a>{{ author }}</a></li>
+                  <li class="d-flex align-items-left"><i class="bi bi-clock"></i> <a><time datetime="{{ post.date | date: '%Y-%m-%d' }}">{{ post.date | date: '%B %d, %Y' }}</time></a></li>
+                </ul>
+              </div>
+            </div>
+            <div class="col-lg-9">
+              <h2 class="entry-title-list">
+                <a href="{{ post_link }}">{{ post.title }}</a>
+              </h2>
+              <div class="entry-content-list">
+                <p>{{ post.content | strip_html | strip_newlines | truncate: 250, '...' }}</p>
+                <div class="read-more">
+                  <a href="{{ post_link }}">{{ translations.includes.blog.readmore }}</a>
+                </div>
+              </div>
+            </div>
+          </article>
+{% endfor %}
+
+{% include pagination_buttons.html %}
+        </div>
+        <!-- End blog entries list -->
+
+        <!-- // BLOG SIDEBAR HERE // -->
+      </div>
+
+    </div>
+  </section><!-- End Blog Section -->
+  </main>
+  <!-- End #main -->
+
+{% include footer.html %}
+{% include scripts.html %}
+</body>
+</html>
