@@ -93,8 +93,9 @@ permalink: /
             <div class="social">
               {% if member.github   %}<a href="https://github.com/{{ member.github }}" target="_blank"><i class="bi bi-github"></i></a>{% endif %}
               {% if member.twitter  %}<a href="https://twitter.com/@{{ member.twitter  }}" target="_blank"><i class="bi bi-twitter"></i></a>{% endif %}
-              {% if member.mastodon %}<a href="https://mastodon.social/@{{ member.mastodon }}" target="_blank"><i class="bi bi-mastodon"></i></a>{% endif %}
-              {% if member.facebook %}<a href="https://facebook.com/{{ member.facebook }}" target="_blank"><i class="bi bi-facebook"></i></a>{% endif %}
+              {% if member.mastodon  %}<a href="https://mastodon.social/@{{ member.mastodon }}" target="_blank"><i class="bi bi-mastodon"></i></a>{% endif %}
+              {% if member.instagram %}<a href="https://instagram.com/{{ member.instagram }}" target="_blank"><i class="bi bi-instagram"></i></a>{% endif %}
+              {% if member.facebook  %}<a href="https://facebook.com/{{ member.facebook }}" target="_blank"><i class="bi bi-facebook"></i></a>{% endif %}
               {% if member.linkedin %}<a href="https://linkedin.com/in/{{ member.linkedin }}" target="_blank"><i class="bi bi-linkedin"></i></a>{% endif %}
               {% if member.youtube  %}<a href="https://youtube.com/@{{ member.youtube }}" target="_blank"><i class="bi bi-youtube"></i></a>{% endif %}
               {% if member.medium   %}<a href="https://medium.com/@{{ member.medium }}" target="_blank"><i class="bx bxl-medium"></i></a>{% endif %}

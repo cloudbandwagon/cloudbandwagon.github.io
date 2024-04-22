@@ -10,6 +10,7 @@ profile:    # 사진 파일명 (300px x 300px)
 # 소셜 정보 (최대 4개)
 github:     # GitHub ID
 twitter:    # Twitter ID (@ 제외)
+instagram:  # Instagram ID
 linkedin:   # Linkedin ID
 homepage:   # 홈페이지 주소 (https:// 제외)
 mediaum:    # 미디엄 주소 (@ 제외)
