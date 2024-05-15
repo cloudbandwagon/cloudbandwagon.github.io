@@ -44,3 +44,9 @@ gem "http_parser.rb", "~> 0.6.0", :platforms => [:jruby]
 group :jekyll_plugins do
   gem "jekyll-polyglot"
 end
+
+# Paginator plugin
+gem "jekyll-paginate-v2"
+
+# Redirect-from plugin
+gem "jekyll-redirect-from"

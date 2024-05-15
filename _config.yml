@@ -1,12 +1,14 @@
 # Site settings
 title: SITE_TITLE                       # 기본값, 언어별 _data/[lang]/translations.yml 의 title 을 사용
-email: enquiry@bandwagon.cloud
 description: SITE_DESCRIPTIONS          # 기본값, 언어별 _data/[lang]/translations.yml 의 description 을 사용
+email: enquiry@bandwagon.cloud
 url: https://bandwagon.cloud
 baseurl: /
 analytics:
   google: G-3JQWP2V3H3
   microsoft: fy8z2p7qhr
+timezone: Asia/Seoul
+
 
 # Site properties
 ext_links:
@@ -15,12 +17,15 @@ ext_links:
   youtube: https://youtube.com/@CloudBandWagon
   facebook: https://www.facebook.com/groups/377135874191187
 
+
 # Build settings
 markdown: kramdown
 theme: minima
 plugins:
   - jekyll-polyglot
   - jekyll-feed
+  - jekyll-paginate-v2
+  - jekyll-redirect-from
 permalink: pretty
 sass:
   sourcemap: never
@@ -29,6 +34,10 @@ collections:
     output: false
   members:
     output: false
+  posts:
+    output: true
+    permalink: /blog/:title/
+
 
 # Include from processing
 include:
@@ -40,11 +49,9 @@ exclude:
   - README.md
   - Gemfile
   - Gemfile.lock
-  - node_modules
-  - vendor/bundle/
-  - vendor/cache/
-  - vendor/gems/
-  - vendor/ruby/
+  - node_modules/
+  - images/
+  - vendor/
 
 
 # Polyglot settings for i18n
@@ -55,3 +62,21 @@ languages:
 exclude_from_localization:
   - assets
 parallel_localization: true
+
+
+# Pagination
+pagination:
+  enabled: true
+  debug: false
+  collection: 'posts'
+  per_page: 5
+  permalink: '/blog/:num/'
+  title: ':title (:num / :max)'
+  limit: 0
+  sort_field: 'date'
+  sort_reverse: true
+  category: 'posts'
+  trail:
+    before: 2
+    after: 2
+  extension: html
